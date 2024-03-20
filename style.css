@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    --twitter-color:#50b7f5;
+    --twitter-background:#e6ecf0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    height: 100%;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.sidebar{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--twitter-background);
+    padding: 2rem;
+}
+.sidebar > img{
+    height: 100%;
+    max-height: 2em;
+    width: 100%;
+    max-width: 2em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.sidebarOption{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebarOption .material-symbols-rounded {
+    padding: .85rem;
+    
+}
+/* .material-symbols-rounded{
+    height: 60px;
+} */
+.sidebarOption h3{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.sidebarOption:hover{
+    background-color: var(--twitter-background);
+    border-radius: 1.875em;
+    transition: 100ms ease-out;
+}
+.sidebar_tweet{
+    width: 85%;
+    border: none;
+    background-color: var(--twitter-color);
+    color: white;
+    border-radius: 1.875em;
+    font-weight: 900;
+    margin-top: 1.25em;
+    height: 3.125em;
+    max-width: 10.937em;
+    cursor: pointer;
+}
+
+
+/* feed */
+.feed{
+    border-right: 0.062em solid var(--twitter-background);
+    overflow-y: scroll;
+}
+/* .feed_header{
+    position: relative;
+    top: 0;
+    z-index: 100;
+    border: 0.062em solid var(--twitter-background);
+    padding: 0.937em 1.25em;
+    /* font-weight: 700; */
+    /* background-color: white;
+} */
+.feed_header h2{
+    font-size: 1.25em;
+    font-weight: 800;
+}
+
+/* to hide the scrollbar */
+.feed::-webkit-scrollbar{
+    display: none;
+}
+.feed{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* ----- */
+
+/* tweetbox */
+.tweetbox_input img{
+    border: 50%;
+    height: 3.125em;
+
+}
+.tweetbox{
+    padding-bottom: 0.625em;
+    border-bottom: 0.0625em solid var(--twitter-background);
+    padding-right:0.625em;
+}
+.tweetbox{
+    display: flex;
+    flex-direction: column;
+}
+.tweetbox_input{
+    display: flex;
+    padding: 1.25em;
+    /* flex-direction: column; */
+}
+.tweetbox_input input{
+    margin-left: 1.25em;
+    font-size: 1.25em;
+    border: none;
+    outline: none;
+}
+.tweetbox_tweetbutton{
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 1.25em;
+    margin-left:  auto;
+    cursor: pointer;
+}
+
+/* styling post */
+
+.post_avatar img{
+    border-radius: 50%;
+    height: 2.5em;
+}
+.post{ 
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 0.0625em solid var(--twitter-background);
+    width: 100%;
+    max-width: 40em;
+}
+
+.post_body img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.25em ;
+}
+.post_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.625em;
+
+}
+.verified .material-symbols-rounded{
+    font-size: 0.937em !important;
+    color: var(--twitter-color);
+    margin-right: 5px;
+}
+.verified{
+    font-weight: 600px;
+    font-size: 0.625em;
+    color: grey;
+}
+.post_headertext h3{
+    font: 0.937em;
+    margin-bottom: 0.3125em;
+}
+.postheader_description{
+    margin-bottom:0.625em;
+    font-size:  0.937em;
+    width: 100%;
+    /* white-space: initial; */
+    /* max-width: 32%; */
+    /* white-space: nowrap; */
+}
+/* .postheader_description p{
+    white-space: normal;
+    width: 100%;
+} */
+.post_body{
+    flex: 1;
+    padding: 0.625em;
+}
+.post_avatar{
+    padding: 1.25em;
+}
+/* styling post ends*/
+
+
+.clickhere{
+    /* cursor: pointer;
+    background-color: black; */
+    cursor: pointer;
+    
+}
+/*  */
+
+/* .widgets */
+.widgets{
+   
+    max-width: 20%;
+}
+.widgets_input{
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 0.625em;
+    border-radius: 1.25em;
+    margin-top: 0.625em;
+    margin-left: 1.25em;
+}
+.widgets_input input{
+    width: 100%;
+    border: none;
+    background-color: var(--twitter-background);
+    outline: none; 
+} 
+.widgets_input .material-symbols-rounded{
+    color: grey;
+}
+.widgets_container{
+    margin-top: 0.937em;
+    margin-left: 1.25em;
+    border-radius: 1.25em;
+}
+.widgets_container h2{
+    font-size: 1.125em;
+    font-weight: 1.125em;
+}
+
+
+  .showItems{
+    display: none;
+  }
+
+
+@media only screen and (max-width: 1050px){
+    .navBtn{
+        display: none;
+    }
+    .sidebar{
+        align-items: center;
+    }
+    .sidebarOption span{
+        font-size: 2rem;
+    }
+    .sidebar_tweet{
+        width: 90%;
+    }
+    .sidebar > img{
+        margin: 0;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px){
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        box-sizing: border-box;
+        background-color: white;
+        justify-content: space-around;
+        margin: 0;
+        flex-direction: row;
+        color: black;
+        border-top: 2px solid var(--twitter-background);
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .tweetbox{
+        all: unset;
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tweetbox_tweetbutton{
+        width:100%;
+        margin:0;
+        padding: 0;
+    }
+    .widgets{
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 10vh;
+    }
+    .removingItems{
+        display: none;
+    }
+    .feed_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .showItems{
+        display: block;
+        width: 10%;
+        height: 100%;
+      }
+
+    
+
+  }
+
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:#fff url('./img/bg_loader.gif') no-repeat center center;
+    z-index: 100;
+}
